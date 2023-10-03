@@ -1,0 +1,112 @@
+.dashboard-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons {
+    margin : 5px;
+}
+
+.calender {
+    padding: 20px 100px;
+    width: 90%;
+    display: float;
+}
+
+.dot {
+    height: 7px;
+    width: 7px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    margin: auto 3px;
+}
+
+.calender-event {
+    padding: 2px;
+    border-radius: 0.25rem;
+    color: white;
+    font-size: 12px;
+    width: 100%;
+}
+
+.Scheduled {
+    background-color: #003338;
+}
+
+.Completed {
+    background-color: #09550f;
+}
+
+.Cancelled {
+    background-color: #8f0e2a;
+}
+
+.card-body-Scheduled {
+    border: #003338 solid 8px;
+}
+
+.card-body-Completed {
+    border: #09550f solid 8px;
+}
+
+.card-body-Cancelled {
+    border: #8f0e2a solid 8px;
+}
+
+.upcoming-appointments {
+    width: 30%;
+    display: float;
+    background-color: white;
+}
+
+.upcoming-title {
+    background-color: #d1a6d4;
+    padding: 10px;
+    border: white 5px solid;
+    font-size: 150%;
+    margin: 0;
+}
+
+.for-scroll {
+    height: 80vh;
+    overflow-y: scroll;
+    background-color: #e1cce2;
+}
+
+.today-card.card {
+    width: 80%;
+    margin: 10%;
+}
+
+.fc-day {
+    background-color: #e1cce2;
+    border-color: black !important;
+}
+
+.fc-day-today {
+    background-color: #d1a6d4 !important;
+}
+
+.fc-col-header-cell {
+    background-color: #d1a6d4;
+}
+
+.fc-daygrid-day-number,
+.fc-col-header-cell-cushion {
+    color: black;
+}
+
+.fc-toolbar-title {
+    background-color: white;
+    padding: 5px;
+}
+
+.fc-theme-standard td,
+.fc-theme-standard th {
+    color: black !important;
+}
+
+.fc-today-button, .fc-prev-button, .fc-next-button {
+    border: white 2px solid;
+}
