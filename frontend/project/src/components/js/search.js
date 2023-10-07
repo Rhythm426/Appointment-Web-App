@@ -129,7 +129,7 @@ function DocCard(props) {
 				<hr />
 				<div className="stats">
 					<div className="each-stat">
-						<h3>{props.gender === 'F' ? "Female" : (props.gender === 'M' ? "Male" : "Other")}</h3>
+						<h3>{props.gender}</h3>
 						<h6>Gender</h6>
 					</div>
 					<div className="each-stat">

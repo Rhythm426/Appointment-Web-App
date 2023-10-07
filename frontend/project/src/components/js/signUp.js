@@ -16,11 +16,11 @@ function SignUp() {
     const [message, setMessage] = React.useState("");
     const [message1, setMessage1] = React.useState("");
     const [email, setEmail] = React.useState("");
-    const [gender, setGender] = React.useState("");
+    const [gender, setGender] = React.useState("Male");
     const [phone, setPhone] = React.useState("");
     const [address, setAddress] = React.useState("");
     const [dob, setDob] = React.useState("");
-    const [bloodgroup, setBloodgroup] = React.useState("");
+    const [bloodgroup, setBloodgroup] = React.useState("O+");
     const [degree, setDegree] = React.useState("");
     const [specialisation, setSpecialisation] = React.useState("");
     const [type, setType] = React.useState("Patient");
@@ -89,7 +89,6 @@ function SignUp() {
     };
 
     const tryLogin = async (e) => {
-        console.log(email, password, type);
         const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/userlogin`, {
             "email": email,
             "password": password,
@@ -120,21 +119,21 @@ function SignUp() {
                     >
                         <Tab tabClassName="coloredTab" eventKey="Patient" title="Patient">
 
-                            <form className="form-left" action="#">
+                            <div className="form-left">
                                 <input className="signup-iinput" placeholder="email" type="email" onChange={(e) => { setEmail(e.target.value) }} />
                                 <input className="signup-iinput" placeholder="password" type="password" onChange={(e) => { setPassword(crypto.SHA256(e.target.value).toString()) }} />
                                 {message1 && <Alert className="signup-iinput" key="danger" variant="danger">{message1}</Alert>}
                                 <button className="first-button" onClick={(e) => { setType("Patient"); tryLogin() }}>Login</button>
-                            </form>
+                            </div>
                         </Tab>
                         <Tab tabClassName="coloredTab" eventKey="Doctor" title="Doctor">
 
-                            <form className="form-left" action="#">
+                            <div className="form-left" action="#">
                                 <input className="signup-iinput" placeholder="email" type="email" onChange={(e) => { setEmail(e.target.value) }} />
                                 <input className="signup-iinput" placeholder="password" type="password" onChange={(e) => { setPassword(crypto.SHA256(e.target.value).toString()) }} />
                                 {message1 && <Alert className="signup-iinput" key="danger" variant="danger">{message1}</Alert>}
                                 <button className="first-button" onClick={(e) => { setType("Doctor"); tryLogin() }}>Login</button>
-                            </form>
+                            </div>
                         </Tab>
                     </Tabs>
                 </div>
@@ -147,7 +146,7 @@ function SignUp() {
                         fill
                     >
                         <Tab tabClassName="coloredTab" eventKey="Patient" title="Patient">
-                            <form className="form-right" action="#">
+                            <div className="form-right" action="#">
                                 <input className="signup-iinput" placeholder="name" onChange={(e) => { setUsername(e.target.value) }} />
                                 <input className="signup-iinput" placeholder="email" type="email" onChange={(e) => { setEmail(e.target.value) }} />
                                 <input className="signup-iinput" placeholder="password" type="password" onChange={(e) => { setPassword(crypto.SHA256(e.target.value).toString()) }} />
@@ -172,10 +171,10 @@ function SignUp() {
                                 </select>
                                 {message && <Alert className="signup-iinput" key="danger" variant="danger">{message}</Alert>}
                                 <button className="first-button" onClick={(e) => { setType("Patient"); trySignUpPatient() }}>Sign Up</button>
-                            </form>
+                            </div>
                         </Tab>
                         <Tab eventKey="Doctor" title="Doctor">
-                            <form className="form-right" action="#">
+                            <div className="form-right" action="#">
                                 <input className="signup-iinput" placeholder="name" onChange={(e) => { setUsername(e.target.value) }} />
                                 <input className="signup-iinput" placeholder="email" type="email" onChange={(e) => { setEmail(e.target.value) }} />
                                 <input className="signup-iinput" placeholder="password" type="password" onChange={(e) => { setPassword(crypto.SHA256(e.target.value).toString()) }} />
@@ -190,7 +189,7 @@ function SignUp() {
                                 <input className="signup-iinput" placeholder="specialisation" onChange={(e) => { setSpecialisation(e.target.value) }} />
                                 {message && <Alert className="signup-iinput" key="danger" variant="danger">{message}</Alert>}
                                 <button className="first-button" onClick={(e) => { setType("Docotr"); trySignUpDoctor() }}>Sign Up</button>
-                            </form>
+                            </div>
                         </Tab>
                     </Tabs>
 

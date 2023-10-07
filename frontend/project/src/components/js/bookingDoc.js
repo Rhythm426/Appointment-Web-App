@@ -84,7 +84,7 @@ function BookingDoc() {
                     </div>
                 </div>
                 <div className="booking-right">
-                    <form className="booking-form" action="#">
+                    <div className="booking-form">
                         <h1>Book an appointment</h1>
                         <input className="booking-input" placeholder="patient email" type="email" value={email} />
 
@@ -113,7 +113,7 @@ function BookingDoc() {
                         <input className="booking-input" placeholder="symptoms" type="text" maxLength={200} onChange={(e) => { setSymptoms(e.target.value) }} />
                         {message && <Alert className="booking-input" key="danger" variant="danger">{message}</Alert>}
                         <button className="first-button" onClick={tryBooking}>Book</button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
