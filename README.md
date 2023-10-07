@@ -18,6 +18,28 @@ Doctors -
 - __Manage Appointments :__ Efficiently organize your schedule by viewing upcoming appointments, marking them as completed or cancelling them.
 - __Profile Management :__ Maintain your professional details, contact information, and practice information to ensure patients can easily find and connect with you.
 
+## Tech Stack
+### Frontend
+- `react` for building interactive UIs
+- `react-dom` for rendering the UI
+- `react-router` for page navigation
+- Styling
+  - `bootstrap` for providing responsive stylesheets
+  - `react-bootstrap` for providing components built on top of Bootstrap CSS without using plugins
+  - `fort-awesome` for displaying icons
+  - `react-lottie` for rendering lottie animations
+  - `full-calender` for showing calender on dashboard
+- State management and backend integration
+  - `axios` for performing asynchronous calls
+- Utilities
+  -  `crypto-js` for hashing passwords while storing in backend
+
+### Backend
+- `django` for building backend logic using Python
+- `djangorestframework` for building a REST API on top of Django
+- `django-cors-headers` for handling the server headers required for Cross-Origin Resource Sharing (CORS)
+- `psycopg2` for using PostgreSQL database
+
 ## Pages
 ### Login - Signup
   <p align="center">
